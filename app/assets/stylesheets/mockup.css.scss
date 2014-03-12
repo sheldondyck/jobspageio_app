@@ -1,0 +1,111 @@
+// TODO: lots in common with Site
+.colour-bars {
+  height: $colour-bar-height;
+  z-index: 9999;
+
+  div {
+    height: $colour-bar-height;
+    width: 8.33333%;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+  }
+}
+
+.jobspageio-yellow {
+  color: $jobspageio-yellow;
+}
+
+.colour-bar-yellow {
+  background: none repeat scroll 0% 0% $jobspageio-yellow;
+}
+
+.jobspageio-amber {
+  color: $jobspageio-amber;
+}
+
+.colour-bar-amber {
+  background: none repeat scroll 0% 0% $jobspageio-amber;
+}
+
+.jobspageio-orange {
+  color: $jobspageio-orange;
+}
+
+.colour-bar-orange {
+  background: none repeat scroll 0% 0% $jobspageio-orange;
+}
+
+.jobspageio-sunset {
+  color: $jobspageio-sunset;
+}
+
+.colour-bar-sunset {
+  background: none repeat scroll 0% 0% $jobspageio-sunset;
+}
+
+.jobspageio-red {
+  color: $jobspageio-red;
+}
+
+.colour-bar-red {
+  background: none repeat scroll 0% 0% $jobspageio-red;
+}
+
+.jobspageio-fuchsia {
+  color: $jobspageio-fuchsia;
+}
+
+.colour-bar-fuchsia {
+  background: none repeat scroll 0% 0% $jobspageio-fuchsia;
+}
+
+.jobspageio-purple {
+  color: $jobspageio-purple;
+}
+
+.colour-bar-purple {
+  background: none repeat scroll 0% 0% $jobspageio-purple;
+}
+
+.jobspageio-indigo {
+  color: $jobspageio-indigo;
+}
+
+.colour-bar-indigo {
+  background: none repeat scroll 0% 0% $jobspageio-indigo;
+}
+
+.jobspageio-blue {
+  color: $jobspageio-blue;
+}
+
+.colour-bar-blue {
+  background: none repeat scroll 0% 0% $jobspageio-blue;
+}
+
+.jobspageio-aqua {
+  color: $jobspageio-aqua;
+}
+
+.colour-bar-aqua {
+  background: none repeat scroll 0% 0% $jobspageio-aqua;
+}
+
+.jobspageio-green {
+  color: $jobspageio-green;
+}
+
+.colour-bar-green {
+  background: none repeat scroll 0% 0% $jobspageio-green;
+}
+
+.jobspageio-lime {
+  color: $jobspageio-lime;
+}
+
+.colour-bar-lime {
+  background: none repeat scroll 0% 0% $jobspageio-lime;
+}
+
+

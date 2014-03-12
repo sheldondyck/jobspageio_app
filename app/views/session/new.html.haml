@@ -1,0 +1,29 @@
+=render('layouts/signinup_menu')
+.container
+  .signin-dialog
+    .row
+      .col-sm-6.col-sm-offset-3
+        .well
+          =form_for :session, url: signin_path, html: {class: 'form-horizontal'} do |f|
+            .row
+              .col-lg-12
+                %legend Welcome back
+                !=flash_handler
+                .form-group
+                  %label.col-lg-4.control-label{for: 'email'} Email
+                  .col-lg-6
+                    %input.form-control#email{placeholder: 'Email', name: 'session[email]', value: @email, type: 'text'}
+                .form-group
+                  %label.col-lg-4.control-label{for: 'password'} Password
+                  .col-lg-6
+                    =f.password_field :password, class: 'form-control', placeholder: 'Password', id: 'password'
+                .form-group
+                  .col-lg-offset-4.col-lg-6
+                    =button_tag 'Sign In', type: 'submit', class: 'btn btn-primary', 'data-disable-with' => 'Signing In ...'
+    .row
+      .col-sm-6.col-sm-offset-3
+        %p
+          You don't have an account?
+          =link_to 'Join Now!', signup_path
+-#= render 'pages/footer'
+
