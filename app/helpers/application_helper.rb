@@ -19,8 +19,8 @@ module ApplicationHelper
     end
   end
 
-  def icon_tag icon_name
-    raw "<i class='fa fa-#{icon_name} fa-lg pull-left'></i>"
+  def icon_tag icon_name, position
+    raw "<i class='fa fa-#{icon_name} fa-lg pull-#{position}'></i>"
   end
 
   def title
@@ -45,7 +45,7 @@ module ApplicationHelper
     flash.each do |key, value|
       css_alert = css_alert_map[key] ||= 'danger'
       div += "<div class='alert alert-#{css_alert}' data-dismiss='alert'>"
-      div += "<h4>#{icon_tag('exclamation-triangle')} Opps...</h4>" if key == :alert || key == :error
+      div += "<h4>#{icon_tag('exclamation-triangle', 'left')} Opps...</h4>" if key == :alert || key == :error
       div += "<strong>#{value}</strong>"
       div += "</div>"
     end
