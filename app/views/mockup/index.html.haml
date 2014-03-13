@@ -3,12 +3,12 @@
   %ul
     %li
       =remote_link_icon_to 'Activate My Jobs Page', 'power-off', '#'
-    %li
+    %li.active
       =remote_link_icon_to 'Dashboard', 'home', '#'
     %li
       =remote_link_icon_to 'Job Listings', 'group', '#'
     %li
-      =remote_link_icon_to 'Responses', 'envelope-o', '#'
+      =remote_link_icon_to 'Replies', 'envelope-o', '#'
     %li
       =remote_link_icon_to 'Activity', 'tachometer', '#'
     %li
@@ -19,3 +19,4 @@
       =remote_link_icon_to 'Plugins', 'globe', '#'
 
 .jobspageio-main
+  =render('dashboard')
