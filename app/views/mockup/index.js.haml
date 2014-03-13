@@ -1,0 +1,5 @@
+// TODO: use .replaceWith() instead of .remove() here.
+$('.jobspageio-main-panel').remove();
+$('.jobspageio-main').append("#{escape_javascript render(@panel)}");
+$('.sidebar-panel').removeClass('active')
+$('.sidebar-panel-#{@panel}').addClass('active')
