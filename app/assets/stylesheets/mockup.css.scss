@@ -1,3 +1,21 @@
+.jobspageio-sidebar-nav {
+  background-color: #f6f6f6;
+  border-right: 1px solid  #dedede;
+  float: left;
+  width: 200px;
+  height: 100%;
+
+  ul {
+    padding: 0px;
+    margin: 0x;
+    list-style: none outside none;
+
+    li {
+      padding: 50px;
+    }
+  }
+}
+
 // TODO: lots in common with Site
 .colour-bars {
   height: $colour-bar-height;
