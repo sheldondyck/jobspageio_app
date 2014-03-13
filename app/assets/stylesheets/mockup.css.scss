@@ -11,7 +11,28 @@
     list-style: none outside none;
 
     li {
-      padding: 50px;
+      a {
+        //font-size: 0.875rem;
+        //line-height: 1.33438rem;
+        display: block;
+        padding: 1.3rem 0px;
+        //width: 9.9375rem;
+        color: #AFAFAF;
+        text-align: center;
+        text-decoration: none;
+
+        i {
+          font-size: 2.5em;
+          padding: 5px;
+          display: block;
+          font-style: normal;
+          margin-right: 3px;
+          position: relative;
+          top: 1px;
+          font-weight: 400;
+          vertical-align: middle;
+        }
+      }
     }
   }
 }

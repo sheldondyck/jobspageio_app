@@ -23,6 +23,10 @@ module ApplicationHelper
     raw "<i class='fa fa-#{icon_name} fa-lg pull-#{position}'></i>"
   end
 
+  def remote_link_icon_to link_text, icon_name, href
+    link_to raw("<i class='fa fa-#{icon_name}'></i>") + link_text, href, {alt: link_text, id: "link-#{icon_name}", data: {remote: 'true'}}
+  end
+
   def title
     if @title.nil?
       app_name

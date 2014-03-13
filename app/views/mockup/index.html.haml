@@ -1,13 +1,21 @@
 =render('layouts/app_menu')
 .jobspageio-sidebar-nav
   %ul
-    %li Activate Jobs Page
-    %li Dashboard
-    %li Job Listings
-    %li Responses
-    %li Activity
-    %li Team Members
-    %li Customize Page
-    %li Plugins
+    %li
+      =remote_link_icon_to 'Activate My Jobs Page', 'power-off', '#'
+    %li
+      =remote_link_icon_to 'Dashboard', 'home', '#'
+    %li
+      =remote_link_icon_to 'Job Listings', 'group', '#'
+    %li
+      =remote_link_icon_to 'Responses', 'envelope-o', '#'
+    %li
+      =remote_link_icon_to 'Activity', 'tachometer', '#'
+    %li
+      =remote_link_icon_to 'Team Members', 'user', '#'
+    %li
+      =remote_link_icon_to 'Customize Page', 'list-alt', '#'
+    %li
+      =remote_link_icon_to 'Plugins', 'globe', '#'
 
 .jobspageio-main
