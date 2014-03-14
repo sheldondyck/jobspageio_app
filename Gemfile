@@ -19,6 +19,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'figaro'
 gem 'uglifier', '>= 1.3.0'
 gem 'font-awesome-rails'
+gem 'chart-js-rails'
 
 group :development do
   gem 'therubyracer', platforms: :ruby
