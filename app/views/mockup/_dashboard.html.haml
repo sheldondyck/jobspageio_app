@@ -28,3 +28,74 @@
   .row
     .col-sm-9.col-sm-offset-2
       %canvas#canvas{:height => "200", :width => "200"}
+
+  .row
+    .col-sm-9.col-sm-offset-2
+      %canvas#doughnut{:height => "200", :width => "200"}
+  :javascript
+    // This is our destination canvas.
+    var canvas = $('#doughnut')[0];
+    var ctx = canvas.getContext('2d')
+
+    // This is the canvas we're going to render chart.js to.
+    var placeholder = document.createElement('canvas');
+    placeholder.width = $(canvas).width();
+    placeholder.height = placeholder.width;
+    var placeholderctx = placeholder.getContext('2d');
+
+    // Render a chart to our temp canvas.
+    new Chart(placeholderctx).Doughnut([{
+    value: 10,
+    color: 'lightgrey'
+    }, {
+    value: 20,
+    color: 'white' // This is the bit we're cropping out.
+    }, {
+    value: 8,
+    color: 'lightgrey'
+    }, {
+    value: 2,
+    color: 'blue'
+    }], {
+    animation: true,
+    segmentShowStroke: false,
+    onAnimationComplete: function() {
+    function drawLine(color,left,top,bottom){
+    placeholderctx.strokeStyle = color;
+    placeholderctx.lineWidth = 1;
+
+    placeholderctx.beginPath();
+    // Start from the top-left point.
+
+    placeholderctx.moveTo(left, top);
+    placeholderctx.lineTo(left,bottom);
+
+    // Done! Now fill the shape, and draw the stroke.
+    // Note: your shape will not be visible until you call any of the two methods.
+    placeholderctx.stroke();
+    placeholderctx.closePath();
+    }
+    // Some magic numbers.
+    var center = Math.round($(placeholder).width() / 2);
+    var offset1 = center / 40;
+    var offset2 = center / 80;
+    // Draw a centreline.
+    drawLine('white',center,offset1,center / 2+offset2);
+    drawLine('lightgrey',center,0,offset1);
+    drawLine('lightgrey',center,center / 2+offset2,center / 2+offset1+offset2);
+    // Crop and draw the doughnut to the dest canvas.
+    var cropHeight = Math.round(placeholder.height/2);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(
+    placeholder,
+    0,
+    0,
+    placeholder.width,
+    cropHeight,
+    0,
+    0,
+    placeholder.width,
+    cropHeight
+    );
+    }
+    });
