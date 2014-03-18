@@ -3,7 +3,10 @@ body {
 }
 
 .jobspageio-main {
-  display: block;
+  position: relative;
+  // TODO: lookup docs on overflow. it was key to getting the layout to work corrrectly.
+  overflow: hidden;
+  //display: block;
   //background-color: #f00;
   padding: 5px;
   //left: $jobspageio-sidebar-width;

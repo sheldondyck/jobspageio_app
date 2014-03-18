@@ -2,4 +2,6 @@
 .jobspageio-sidebar-nav
   = render 'sidebar_nav'
 .jobspageio-main
-  =render(@panel)
+  =render @panel
+%script
+  =render 'sidebar_activate_item.js'
