@@ -1,10 +1,45 @@
 .jobspageio-main-panel
-  %h1 Jobs Listings
+  .row
+    .col-sm-10.col-sm-offset-1
+      %ul.nav.nav-tabs
+        %li.active
+          =link_to 'Active', '#'
+        %li
+          =link_to 'Previous', '#'
+      %table.table.table-hover
+        %thead
+          %tr
+            %th Department
+            %th Title
+            %th Location
+            %th Created
+        %tbody
+          %tr
+            %td Program Manager
+            %td Development Team Manager
+            %td New York
+            %td 02/01/2014
+          %tr
+            %td Developer
+            %td Front End Engineer
+            %td New York
+            %td 02/01/2014
+          %tr
+            %td SysOps
+            %td Network Engineer
+            %td New York
+            %td 02/01/2014
+          %tr
+            %td Marketing
+            %td Community Manager
+            %td New York
+            %td 02/01/2014
+          %tr
+            %td Developer
+            %td Junior Programmer
+            %td New York
+            %td 02/01/2014
 
   .row
-  .col-sm-9.col-sm-offset-2
-    %ul.nav.nav-tabs
-      %li.active
-        =link_to 'Active', '#'
-      %li
-        =link_to 'Previous', '#'
+    .col-sm-9.col-sm-offset-1
+      %button.btn.btn-primary Create Job Posting
