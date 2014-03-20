@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: $jobspageio-background;
 }
@@ -11,6 +15,7 @@ body {
   padding: 5px;
   //left: $jobspageio-sidebar-width;
   height: 100%;
+  min-height: 100%;
 }
 
 .jobspageio-sidebar-nav {
@@ -19,11 +24,14 @@ body {
   float: left;
   width: $jobspageio-sidebar-width;
   height: 100%;
+  min-height: 100%;
 
   ul {
     padding: 0px;
     margin: 0x;
     list-style: none outside none;
+    height: 100%;
+    min-height: 100%;
 
     li {
       border-right: 1px solid  #dedede;
@@ -65,6 +73,11 @@ body {
       a {
         color: #555;
       }
+    }
+
+    li.sidebar-panel-filler {
+      height: 100%;
+      border-right: 1px solid  #dedede;
     }
   }
 }
