@@ -18,6 +18,10 @@ class MockupController < ApplicationController
     render 'index'
   end
 
+  def job_create
+    render 'job_create'
+  end
+
   def replies
     @panel = 'replies'
     render 'index'
