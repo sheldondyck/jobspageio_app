@@ -14,7 +14,7 @@ JobsPageioApp::Application.routes.draw do
   get   'mockup/customize',         :to => 'mockup#customize'
   get   'mockup/plugins',           :to => 'mockup#plugins'
 
-  # TODO: Should be session or sessions
+  # TODO: Should be sessions
   get   'signin',                 :to => 'session#new'
   post  'signin',                 :to => 'session#create'
   get   'signout',                :to => 'session#destroy'
