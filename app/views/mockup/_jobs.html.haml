@@ -2,43 +2,12 @@
   .row
     .col-sm-10.col-sm-offset-1
       %ul.nav.nav-tabs
-        %li.active
-          =link_to 'Active', '#'
-        %li
-          =link_to 'Previous', '#'
-      %table.table.table-hover
-        %thead
-          %tr
-            %th Department
-            %th Title
-            %th Location
-            %th Created
-        %tbody
-          %tr
-            %td Program Manager
-            %td Development Team Manager
-            %td New York
-            %td 02/01/2014
-          %tr
-            %td Developer
-            %td Front End Engineer
-            %td New York
-            %td 02/01/2014
-          %tr
-            %td SysOps
-            %td Network Engineer
-            %td New York
-            %td 02/01/2014
-          %tr
-            %td Marketing
-            %td Community Manager
-            %td New York
-            %td 02/01/2014
-          %tr
-            %td Developer
-            %td Junior Programmer
-            %td New York
-            %td 02/01/2014
+        %li.jobs-listings-navtab.jobs-listings-navtab-active.active
+          =link_to 'Active', mockup_jobs_active_path, remote: true
+        %li.jobs-listings-navtab.jobs-listings-navtab-previous
+          =link_to 'Previous', mockup_jobs_previous_path, remote: true
+      .jobspageio-jobs-listings
+        =render 'jobs_active'
 
   .row
     .col-sm-9.col-sm-offset-1

@@ -18,6 +18,16 @@ class MockupController < ApplicationController
     render 'index'
   end
 
+  def jobs_active
+    @panel = 'active'
+    render 'jobs_listings'
+  end
+
+  def jobs_previous
+    @panel = 'previous'
+    render 'jobs_listings'
+  end
+
   def job_create
     render 'job_create'
   end

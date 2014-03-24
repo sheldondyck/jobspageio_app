@@ -1,4 +1,2 @@
-// TODO: use .replaceWith() instead of .remove() here.
-$('.jobspageio-main-panel').remove();
-$('.jobspageio-main').append("#{escape_javascript render(@panel)}");
+$('.jobspageio-main-panel').replaceWith("#{escape_javascript render(@panel)}");
 =render 'sidebar_activate_item'
