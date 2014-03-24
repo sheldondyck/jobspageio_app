@@ -29,6 +29,7 @@ class MockupController < ApplicationController
   end
 
   def job_create
+    @panel = 'job_create'
     render 'job_create'
   end
 
