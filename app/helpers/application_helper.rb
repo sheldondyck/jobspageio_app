@@ -56,4 +56,15 @@ module ApplicationHelper
     div
   end
 
+  def error_class(h, sym)
+    #if h.errors.messages.has_key?(sym)
+    #  'has-error'
+    #end
+  end
+
+  def error_message(model, sym)
+    #if model.errors.messages.has_key?(sym)
+    #  model.errors.messages[sym][0].capitalize unless model.errors.messages[sym][0].nil?
+    #end
+  end
 end

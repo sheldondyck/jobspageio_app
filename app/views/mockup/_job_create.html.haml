@@ -1,2 +1,67 @@
 .jobspageio-main-panel
-  %h1 Job create
+  .row
+    .col-sm-10.col-sm-offset-1
+      !=flash_handler
+      -#=form_for @account do |f|
+      .row
+        .col-sm-4
+          .form-group#first-name{class: error_class(@user, :first_name)}
+            -# TODO for is not working here but works in signin. why?
+            %label.control-label{for: 'first-name'} First Name
+            %input.form-control#first-name{placeholder: 'First Name', name: 'account[first_name]', value: @user[:first_name], type: 'text'}
+            -unless error_message(@user, :first_name).nil?
+              %p.help-block#first-name
+                %i.fa.fa-exclamation-triangle
+                =error_message(@user, :first_name)
+        .col-sm-4
+          .form-group#last-name{class: error_class(@user, :last_name)}
+            %label.control-label{for: 'last-name'} Last Name
+            %input.form-control#last-name{placeholder: 'Last Name', name: 'account[last_name]', value: @user[:last_name], type: 'text'}
+            -unless error_message(@user, :last_name).nil?
+              %p.help-block#last-name
+                %i.fa.fa-exclamation-triangle
+                =error_message(@user, :last_name)
+        .col-sm-4
+          .signup-field-help
+      .row
+        .col-sm-8
+          .form-group#company-name{class: error_class(@account, :company_name)}
+            %label.control-label{for: 'company-name'} Company Name
+            %input.form-control#company-name{placeholder: 'Company Name', name: 'account[company_name]', value: @account[:company_name], type: 'text'}
+            -unless error_message(@account, :company_name).nil?
+              %p.help-block#company-name
+                %i.fa.fa-exclamation-triangle
+                =error_message(@account, :company_name)
+        .col-sm-4
+          .signup-field-help
+            If you don`t have a company then that is not a problem, just use your own name.
+      .row
+        .col-sm-8
+          .form-group#email{class: error_class(@user, :email)}
+            %label.control-label{for: 'email'} Email
+            %input.form-control#email{placeholder: 'Email', name: 'account[email]', value: @user[:email], type: 'text'}
+            -unless error_message(@user, :email).nil?
+              %p.help-block#email
+                %i.fa.fa-exclamation-triangle
+                =error_message(@user, :email)
+        .col-sm-4
+          .signup-field-help
+            We'll send you an email to activate your account, so please triple-check that you've typed it correctly.
+      .row
+        .col-sm-8
+          %p
+            By clicking "Create my #{app_name} account!", you agree to our
+            =link_to 'Terms of Service', '#'
+            and
+            =link_to 'Privacy Policy', '#'
+        .col-sm-4
+          .signup-field-help
+            -#Our lawyers made us add this part.
+      .row
+        .col-lg-8
+          .form-group
+            =link_to "Save Job Posting", mockup_jobs_path, class: 'btn btn-primary', 'data-disable-with' => 'Signing Up ...', remote: true
+          %p
+            I already have an account.
+            =link_to 'Sign in now!', mockup_jobs_path, remote: true
+
