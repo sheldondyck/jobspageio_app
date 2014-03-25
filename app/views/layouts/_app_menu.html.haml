@@ -5,7 +5,7 @@
       =link_to icon_tag('briefcase', 'left') + app_name, app_url, {class: 'navbar-brand'}
     %ul.nav.navbar-nav.navbar-right.navbar-right-padding
       %li{:class => active('site#features'), id: 'features_link'}
-        =link_to 'Visit Your Jobs Page', '#features', class: 'scroll'
+        =link_to 'Visit Your Jobs Page', mockup_foobar_jobspage_path, class: 'scroll', target: '_blank'
       %li{:class => active('site#features'), id: 'features_link'}
         =link_to 'Take a Tour', '#features', class: 'scroll'
       %li.dropdown

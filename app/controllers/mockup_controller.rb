@@ -50,6 +50,11 @@ class MockupController < ApplicationController
     render 'index'
   end
 
+  def team_create
+    @panel = 'team'
+    render 'index'
+  end
+
   def customize
     @panel = 'customize'
     render 'index'
@@ -61,5 +66,8 @@ class MockupController < ApplicationController
   end
 
   def signup
+  end
+
+  def foobar_jobspage
   end
 end

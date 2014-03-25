@@ -1,2 +1,24 @@
 .jobspageio-main-panel
-  %h1 Team
+  .row
+    .col-sm-10.col-sm-offset-1
+      %table.table.table-hover
+        %thead
+          %tr
+            %th Name
+            %th Email
+            %th Permissions
+            %th Created
+        %tbody
+          %tr
+            %td John Smith
+            %td john.smith@company.com
+            %td Administrator
+            %td 02/01/2014
+          %tr
+            %td Han Solo
+            %td han@company.com
+            %td Normal
+            %td 02/01/2014
+  .row
+    .col-sm-9.col-sm-offset-1
+      =link_to 'Create Team Member', mockup_team_create_path, class: 'btn btn-primary', remote: true
