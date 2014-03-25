@@ -1,6 +1,7 @@
 .jobspageio-main-panel
   .row
     .col-sm-10.col-sm-offset-1
+      %h2 Create Job Posting
       !=flash_handler
       -#=form_for @account do |f|
       .row
@@ -34,7 +35,6 @@
                 =error_message(@account, :company_name)
         .col-sm-4
           .signup-field-help
-            If you don`t have a company then that is not a problem, just use your own name.
       .row
         .col-sm-8
           .form-group#email{class: error_class(@user, :email)}
@@ -46,22 +46,8 @@
                 =error_message(@user, :email)
         .col-sm-4
           .signup-field-help
-            We'll send you an email to activate your account, so please triple-check that you've typed it correctly.
-      .row
-        .col-sm-8
-          %p
-            By clicking "Create my #{app_name} account!", you agree to our
-            =link_to 'Terms of Service', '#'
-            and
-            =link_to 'Privacy Policy', '#'
-        .col-sm-4
-          .signup-field-help
-            -#Our lawyers made us add this part.
       .row
         .col-lg-8
           .form-group
             =link_to "Save Job Posting", mockup_jobs_path, class: 'btn btn-primary', 'data-disable-with' => 'Signing Up ...', remote: true
-          %p
-            I already have an account.
-            =link_to 'Sign in now!', mockup_jobs_path, remote: true
 
