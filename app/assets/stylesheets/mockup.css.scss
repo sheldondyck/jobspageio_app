@@ -6,6 +6,12 @@ body {
   background-color: $jobspageio-background;
 }
 
+.centered {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 .jobspageio-main {
   position: relative;
   // TODO: lookup docs on overflow. it was key to getting the layout to work corrrectly.
@@ -192,4 +198,74 @@ body {
   background: none repeat scroll 0% 0% $jobspageio-lime;
 }
 
+ul.pricing-table {
+  float: left;
+  display: block;
+  width: 30%;
+  max-width: 400px;
+  border: 1px solid rgb(221, 221, 221);
+  margin: 10px;
+  padding: 0px;
+  list-style: none;
+  list-style-position: outside;
+
+  li.title {
+    padding: 5px 10px;
+    background-color: #444;
+    color: rgb(238, 238, 238);
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  li.price {
+    padding: 5px 10px;
+    background-color: #aaa;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  li.description {
+    padding: 5px 10px;
+    background-color: #eee;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    font-size: 10px;
+    font-weight: normal;
+  }
+
+  li.bullet-item {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  li.button {
+    padding: 10px 10px;
+    background-color: #bbb;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  li.price.monthly {
+    display: none;
+  }
+
+  li.price.yearly {
+    display: block;
+  }
+
+  .yearly-details {
+    font-size: 8pt;
+    padding: 5px 0;
+  }
+}
 
