@@ -5,47 +5,42 @@
       !=flash_handler
       -#=form_for @account do |f|
       .row
-        .col-sm-4
+        .col-sm-8
           .form-group#first-name{class: error_class(@user, :first_name)}
             -# TODO for is not working here but works in signin. why?
-            %label.control-label{for: 'first-name'} First Name
-            %input.form-control#first-name{placeholder: 'First Name', name: 'account[first_name]', value: @user[:first_name], type: 'text'}
+            %label.control-label{for: 'first-name'} Categoria
+            %input.form-control#first-name{placeholder: 'Categoria', name: 'account[first_name]', value: @user[:first_name], type: 'text'}
             -unless error_message(@user, :first_name).nil?
               %p.help-block#first-name
                 %i.fa.fa-exclamation-triangle
                 =error_message(@user, :first_name)
-        .col-sm-4
+      .row
+        .col-sm-8
           .form-group#last-name{class: error_class(@user, :last_name)}
-            %label.control-label{for: 'last-name'} Last Name
-            %input.form-control#last-name{placeholder: 'Last Name', name: 'account[last_name]', value: @user[:last_name], type: 'text'}
+            %label.control-label{for: 'last-name'} Title
+            %input.form-control#last-name{placeholder: 'Title', name: 'account[last_name]', value: @user[:last_name], type: 'text'}
             -unless error_message(@user, :last_name).nil?
               %p.help-block#last-name
                 %i.fa.fa-exclamation-triangle
                 =error_message(@user, :last_name)
-        .col-sm-4
-          .signup-field-help
       .row
         .col-sm-8
           .form-group#company-name{class: error_class(@account, :company_name)}
-            %label.control-label{for: 'company-name'} Company Name
-            %input.form-control#company-name{placeholder: 'Company Name', name: 'account[company_name]', value: @account[:company_name], type: 'text'}
+            %label.control-label{for: 'company-name'} Location
+            %input.form-control#company-name{placeholder: 'Location', name: 'account[company_name]', value: @account[:company_name], type: 'text'}
             -unless error_message(@account, :company_name).nil?
               %p.help-block#company-name
                 %i.fa.fa-exclamation-triangle
                 =error_message(@account, :company_name)
-        .col-sm-4
-          .signup-field-help
       .row
         .col-sm-8
           .form-group#email{class: error_class(@user, :email)}
-            %label.control-label{for: 'email'} Email
-            %input.form-control#email{placeholder: 'Email', name: 'account[email]', value: @user[:email], type: 'text'}
+            %label.control-label{for: 'email'} Description
+            %textarea.form-control#email{placeholder: 'Description', name: 'account[email]', value: @user[:email], type: 'text'}
             -unless error_message(@user, :email).nil?
               %p.help-block#email
                 %i.fa.fa-exclamation-triangle
                 =error_message(@user, :email)
-        .col-sm-4
-          .signup-field-help
       .row
         .col-lg-8
           .form-group
