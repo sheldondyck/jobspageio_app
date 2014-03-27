@@ -35,6 +35,13 @@ class MockupController < ApplicationController
     render 'job_create'
   end
 
+  def job
+    @user = {}
+    @account = {}
+    @panel = 'job'
+    render 'job'
+  end
+
   def replies
     @panel = 'replies'
     render 'index'

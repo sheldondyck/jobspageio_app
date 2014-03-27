@@ -8,6 +8,7 @@ JobsPageioApp::Application.routes.draw do
   get   'mockup/jobs/active',       :to => 'mockup#jobs_active'
   get   'mockup/jobs/previous',     :to => 'mockup#jobs_previous'
   get   'mockup/job/create',        :to => 'mockup#job_create'
+  get   'mockup/job/:id',           :to => 'mockup#job'
   get   'mockup/replies',           :to => 'mockup#replies'
   get   'mockup/activity',          :to => 'mockup#activity'
   get   'mockup/team',              :to => 'mockup#team'
