@@ -8,5 +8,6 @@ class SessionController < ApplicationController
   end
 
   def destroy
+    render 'new'
   end
 end
