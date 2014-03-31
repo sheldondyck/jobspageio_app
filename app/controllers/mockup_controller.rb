@@ -72,6 +72,16 @@ class MockupController < ApplicationController
     render 'index'
   end
 
+  def account_activity
+    @panel = 'activity'
+    render 'account_activity'
+  end
+
+  def account_details
+    @panel = 'details'
+    render 'account_details'
+  end
+
   def signup
   end
 

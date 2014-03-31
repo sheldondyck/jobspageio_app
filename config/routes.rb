@@ -15,6 +15,9 @@ JobsPageioApp::Application.routes.draw do
   get   'mockup/team/create',       :to => 'mockup#team_create'
   get   'mockup/customize',         :to => 'mockup#customize'
   get   'mockup/plugins',           :to => 'mockup#plugins'
+  get   'mockup/account/activity',  :to => 'mockup#account_activity'
+  get   'mockup/account/details',   :to => 'mockup#account_details'
+
   get   'mockup/foobar_jobspage',   :to => 'mockup#foobar_jobspage'
 
   # TODO: Should be sessions
