@@ -1,3 +1,7 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('.jobspageio-main').on 'click', '.job-posting-link', ->
+    $.ajax '/mockup/job/' + $(this).data('job'),
+      type: 'GET',
+      dataType: 'script',
+      error: ->
+        alert 'error' # TODO: added generic error handler

@@ -35,6 +35,13 @@ class MockupController < ApplicationController
     render 'job_create'
   end
 
+  def job
+    @user = {}
+    @account = {}
+    @panel = 'job'
+    render 'job'
+  end
+
   def replies
     @panel = 'replies'
     render 'index'
@@ -63,6 +70,16 @@ class MockupController < ApplicationController
   def plugins
     @panel = 'plugins'
     render 'index'
+  end
+
+  def account_activity
+    @panel = 'activity'
+    render 'account_activity'
+  end
+
+  def account_details
+    @panel = 'details'
+    render 'account_details'
   end
 
   def signup

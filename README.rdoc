@@ -1,3 +1,5 @@
+siege -b -c$USER_COUNT -t30s $URL
+
 == README
 
 This README would normally document whatever steps are necessary to get the

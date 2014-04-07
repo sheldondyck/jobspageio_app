@@ -8,12 +8,16 @@ JobsPageioApp::Application.routes.draw do
   get   'mockup/jobs/active',       :to => 'mockup#jobs_active'
   get   'mockup/jobs/previous',     :to => 'mockup#jobs_previous'
   get   'mockup/job/create',        :to => 'mockup#job_create'
+  get   'mockup/job/:id',           :to => 'mockup#job'
   get   'mockup/replies',           :to => 'mockup#replies'
   get   'mockup/activity',          :to => 'mockup#activity'
   get   'mockup/team',              :to => 'mockup#team'
   get   'mockup/team/create',       :to => 'mockup#team_create'
   get   'mockup/customize',         :to => 'mockup#customize'
   get   'mockup/plugins',           :to => 'mockup#plugins'
+  get   'mockup/account/activity',  :to => 'mockup#account_activity'
+  get   'mockup/account/details',   :to => 'mockup#account_details'
+
   get   'mockup/foobar_jobspage',   :to => 'mockup#foobar_jobspage'
 
   # TODO: Should be sessions
