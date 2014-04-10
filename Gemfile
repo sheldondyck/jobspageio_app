@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.0'
 
 gem 'pg'
 gem 'rdiscount' # used for :markdown in haml
@@ -20,6 +20,11 @@ gem 'font-awesome-rails'
 gem 'chart-js-rails'
 
 group :development do
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+  #gem 'guard-zeus'
+  #gem 'spring'
   gem 'therubyracer', platforms: :ruby
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -43,10 +48,6 @@ group :test do
   gem 'turn', '>= 0.8.3', :require => false
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'guard'
-  gem 'guard-bundler'
-  gem 'guard-rspec'
-  gem 'guard-zeus'
   gem 'libnotify'
   gem 'capybara'
   gem 'launchy'
