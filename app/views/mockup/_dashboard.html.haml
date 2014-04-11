@@ -1,5 +1,5 @@
 .jobspageio-main-panel
-  -#:coffee
+  :coffee
     jQuery ->
       data = [
         {
@@ -25,7 +25,7 @@
       ]
       myNewChart = new Chart($("#canvas").get(0).getContext("2d")).Doughnut(data)
 
-  -#.row
+  .row
     -#.col-sm-9.col-sm-offset-2
     .col-sm-9
       %canvas#canvas{:height => "200", :width => "200"}
