@@ -1,6 +1,4 @@
 JobsPageioApp::Application.routes.draw do
-  get   'signup',                   :to => 'mockup#signup'
-
   get   'mockup',                   :to => 'mockup#index'
   get   'mockup/activate',          :to => 'mockup#activate'
   get   'mockup/dashboard',         :to => 'mockup#dashboard'
@@ -20,10 +18,10 @@ JobsPageioApp::Application.routes.draw do
 
   get   'mockup/foobar_jobspage',   :to => 'mockup#foobar_jobspage'
 
-  # TODO: Should be sessions
-  get   'signin',                 :to => 'session#new'
-  post  'signin',                 :to => 'session#create'
-  get   'signout',                :to => 'session#destroy'
+  get   'signup',                   :to => 'mockup#signup'
+  get   'signin',                   :to => 'sessions#new'
+  post  'signin',                   :to => 'sessions#create'
+  get   'signout',                  :to => 'sessions#destroy'
 
-  root 'session#new'
+  root 'mockup#index'
 end

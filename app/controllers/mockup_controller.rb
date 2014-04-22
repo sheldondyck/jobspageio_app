@@ -1,4 +1,6 @@
 class MockupController < ApplicationController
+  before_action :authenticate_user
+
   def index
     @panel = 'dashboard'
   end
