@@ -5,16 +5,16 @@
       =link_to icon_tag('briefcase', 'left') + app_name, app_url, {class: 'navbar-brand'}
     %ul.nav.navbar-nav.navbar-right.navbar-right-padding
       %li{:class => active('site#features'), id: 'features_link'}
-        =link_to 'Visit Foobar\'s Jobs Page', mockup_foobar_jobspage_path, class: 'scroll', target: '_blank'
+        =link_to 'Visit Foobar\'s Jobs Page', mockups_foobar_jobspage_path, class: 'scroll', target: '_blank'
       %li{:class => active('site#features'), id: 'features_link'}
         =link_to 'Take a Tour', '#features', class: 'scroll'
       %li.dropdown
         =link_to raw('Sheldon Van Dyck') + icon_tag('caret-down', 'right'), '#', {class: 'dropdown-toggle', data: {toggle: 'dropdown'}}
         %ul.dropdown-menu
           %li
-            =link_to 'Account Activity', mockup_account_activity_path
+            =link_to 'Account Activity', mockups_account_activity_path
           %li
-            =link_to 'Account Details', mockup_account_details_path
+            =link_to 'Account Details', mockups_account_details_path
           %li
             =link_to app_name + ' News', '#'
           %li

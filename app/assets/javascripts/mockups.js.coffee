@@ -1,6 +1,6 @@
 $ ->
   $('.jobspageio-main').on 'click', '.job-posting-link', ->
-    $.ajax '/mockup/job/' + $(this).data('job'),
+    $.ajax '/mockups/job/' + $(this).data('job'),
       type: 'GET',
       dataType: 'script',
       error: ->

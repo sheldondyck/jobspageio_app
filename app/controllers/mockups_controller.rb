@@ -1,4 +1,4 @@
-class MockupController < ApplicationController
+class MockupsController < ApplicationController
   before_action :authenticate_user
 
   def index
