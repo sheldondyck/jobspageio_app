@@ -74,13 +74,18 @@ class MockupsController < ApplicationController
     render 'index'
   end
 
-  def account_activity
-    @panel = 'account_activity'
+  def account_details
+    @panel = 'account_details'
     render 'index_wo_sidebar'
   end
 
-  def account_details
-    @panel = 'account_details'
+  def account_news
+    @panel = 'account_news'
+    render 'index_wo_sidebar'
+  end
+
+  def account_support
+    @panel = 'account_support'
     render 'index_wo_sidebar'
   end
 

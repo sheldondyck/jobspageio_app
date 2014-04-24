@@ -13,8 +13,9 @@ JobsPageioApp::Application.routes.draw do
   get   'mockups/team/create',       :to => 'mockups#team_create'
   get   'mockups/customize',         :to => 'mockups#customize'
   get   'mockups/plugins',           :to => 'mockups#plugins'
-  get   'mockups/account/activity',  :to => 'mockups#account_activity'
   get   'mockups/account/details',   :to => 'mockups#account_details'
+  get   'mockups/account/news',      :to => 'mockups#account_news'
+  get   'mockups/account/support',   :to => 'mockups#account_support'
 
   get   'mockups/foobar_jobspage',   :to => 'mockups#foobar_jobspage'
 
