@@ -23,6 +23,7 @@ group :development do
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-rspec'
+  gem 'spring-commands-rspec'
   #gem 'guard-zeus'
   #gem 'spring'
   gem 'therubyracer', platforms: :ruby
