@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'Mockup smoke' do
-  scenario 'login fails', js: true do
+  scenario 'login fails' do
     visit signin_path
 
     fill_in 'Email', :with => 'foo@bar.com'
@@ -12,7 +12,7 @@ feature 'Mockup smoke' do
     expect(page).to have_text('Welcome back')
   end
 
-  scenario 'login success', js: true do
+  scenario 'login success' do
     visit signin_path
 
     fill_in 'Email', :with => 'foo@bar.com'
@@ -20,6 +20,8 @@ feature 'Mockup smoke' do
     click_button 'Sign In'
 
     #save_and_open_page
-    expect(page).to have_text('Hello World')
+    #
+    #expect(page).to have_text('Hello World')
+    expect(page).to have_text('Sign Out')
   end
 end
